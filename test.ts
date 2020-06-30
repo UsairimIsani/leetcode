@@ -5,6 +5,7 @@ import { runningSum } from "./leetcode/one_d_arr.ts";
 import { two_sum } from "./leetcode/two_sums.ts";
 import { shuffle } from "./leetcode/shuffle_arr.ts";
 import { kidsWithCandies } from "./leetcode/greates_number_of_candies.ts";
+import { defangIPaddr } from "./leetcode/defangIPaddress.ts";
 
 Deno.test("Two Sums of LeetCode", () => {
     const x = two_sum([2, 7, 11, 15], 9);
@@ -21,4 +22,7 @@ Deno.test("Shuffle Of Leetcode", () => {
 Deno.test("Extra Candies", () => {
     let x = kidsWithCandies([2, 3, 5, 1, 3], 3);
     assertEquals(x, [true, true, true, false, true])
+})
+Deno.test("Defang IP Address", () => {
+    assertEquals(defangIPaddr("1.1.1.1"), "1[.]1[.]1[.]1")
 })
